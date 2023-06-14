@@ -81,7 +81,7 @@
       {
         "type": "select",
         "key": "initialView",
-        "options": ["dayGridMonth", "dayGridWeek", "timeGridDay", "listWeek"] ,
+        "options": ["dayGridMonth", "dayGridWeek", "listWeek"] ,
         "label": "Initial view",
         "defaultValue": "dayGridMonth"
       },
