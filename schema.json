@@ -76,7 +76,7 @@
         "key": "language",
         "options": ["pt", "en", "fr", "es", "ru"] ,
         "label": "language",
-        "defaultValue": "pt"
+        "defaultValue": "en"
       },
       {
         "type": "select",
