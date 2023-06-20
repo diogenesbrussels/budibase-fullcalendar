@@ -25,7 +25,8 @@ You can use up to two data sources, the first source is mandatory. You can diffe
 
 1. First add a data source <p><img src="https://github.com/pixelinfinito/budibase-fullcalendar/blob/main/src/images/usage/2.png" /></p>
 2. Add the calendar component inside the data source, you can search for FullCalendar <p><img src="https://github.com/pixelinfinito/budibase-fullcalendar/blob/main/src/images/usage/3.png" /></p>
-3.  Configure the data that will be used, the fields <b>Title Mapping (Event Group 1) </b> and <b>Date Mapping (Event Group 1)</b> are mandatory <p><img src="https://github.com/pixelinfinito/budibase-fullcalendar/blob/main/src/images/usage/4.png" /></p>
+3.  Configure the data that will be used, up to 3 different data providers <p>![image](https://github.com/diogenesbrussels/budibase-fullcalendar/assets/91942877/53be63d7-cc3f-4c23-a5ec-d7582b098091)
+</p>
 
 ## Features
 
@@ -33,6 +34,7 @@ You can use up to two data sources, the first source is mandatory. You can diffe
 2. Map data that appears in the calendar
 3. Group data by color
 4. Change language
+5. Set start and end date to events
 
 ## Contributing
 
