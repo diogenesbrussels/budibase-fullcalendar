@@ -1,9 +1,9 @@
 export const langs =  [
     {
-        week: {
-            dow: 1,
-            doy: 4, 
-        },
+        // week: {
+        //     dow: 1,
+        //     doy: 4, 
+        // },
         buttonText: {
             prev: 'Anterior',
             next: 'Seguinte',
@@ -20,11 +20,11 @@ export const langs =  [
         noEventsText: 'Não há eventos para mostrar',
     },
     {
-        code: 'es',
-        week: {
-            dow: 1,
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
-        },
+        // code: 'es',
+        // week: {
+        //     dow: 1,
+        //     doy: 4, // The week that contains Jan 4th is the first week of the year.
+        // },
         buttonText: {
             prev: 'Ant',
             next: 'Sig',
@@ -60,11 +60,11 @@ export const langs =  [
         eventHint: 'Evento',
     },
     {
-        code: 'ru',
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        // code: 'ru',
+        // week: {
+        //     dow: 1,
+        //     doy: 4,
+        // },
         buttonText: {
             prev: 'Пред',
             next: 'След',
@@ -83,11 +83,11 @@ export const langs =  [
         noEventsText: 'Нет событий для отображения',
     },
     {
-        code: 'fr',
-        week: {
-            dow: 1,
-            doy: 4, // The week that contains Jan 4th is the first week of the year.
-        },
+        // code: 'fr',
+        // week: {
+        //     dow: 1,
+        //     doy: 4, // The week that contains Jan 4th is the first week of the year.
+        // },
         buttonText: {
             prev: 'Précédent',
             next: 'Suivant',
