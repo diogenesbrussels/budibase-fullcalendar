@@ -104,57 +104,10 @@
   resolved "https://registry.yarnpkg.com/@crownframework/svelte-error-boundary/-/svelte-error-boundary-1.0.3.tgz#f251254075bfe25cff0e8b40e9c81ddcd552f894"
   integrity sha512-ZtfYF9if48Ok8BTx/fn7bERJFKHKO6Ih5d/fkY6/pC3DQEnJq4vy6JOBFcisnpKYcZbjG5F/D4r06kqX7JKyqw==
 
-"@event-calendar/common@~0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/common/-/common-0.17.0.tgz#12159ad7addc7bf42973f19c67a84bfd9464f412"
-  integrity sha512-frFV2HW/ZbcE1mdkxcbYhD9mAESWpVJCCQT8fW5pGlch6l0T/FpUkfio/rBEn+1aAxNMTaSNli14gWqovtVoUg==
-  dependencies:
-    svelte "^3.55.1"
-
-"@event-calendar/core@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/core/-/core-0.17.0.tgz#e38109794cf7bf855b2ced719e04975532a4c516"
-  integrity sha512-QoZ4jZmVucMVYtQpRp9IX9CXKknxq1DVycxiLpFiAlwYXkZHXKPXMA+EtMLx/OOuUAnjQC1huZON5kIP0un5jw==
-  dependencies:
-    "@event-calendar/common" "~0.17.0"
-    svelte "^3.55.1"
-
-"@event-calendar/day-grid@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/day-grid/-/day-grid-0.17.0.tgz#d6dab4f3377c73d98e763bd1c9606ebe09a27fc5"
-  integrity sha512-srv2BaLA0zcdJPqqwM4GhbZHHiBn034iptkrOoD3melgrFbkuyLwA1EtjtD9H4N6n7p4wbNXx14Lti76fbfOPA==
-  dependencies:
-    "@event-calendar/common" "~0.17.0"
-    svelte "^3.55.1"
-
-"@event-calendar/list@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/list/-/list-0.17.0.tgz#80a38748872099d7d0d86e028b4f7591d162467e"
-  integrity sha512-DEebqWw5NN+zDZZ+ZE0s9ZLIfbDpcmXIkXZdQKqirFdtv6FZv0+WhZ1Lzq8V+o4pkawVGhlXdeMCTTTdd2Xd0A==
-  dependencies:
-    "@event-calendar/common" "~0.17.0"
-    svelte "^3.55.1"
-
-"@event-calendar/resource-time-grid@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/resource-time-grid/-/resource-time-grid-0.17.0.tgz#b28c52acfa36df0f0eb458431280f90f0c06bb35"
-  integrity sha512-J8d2r4uAHEhIgtwihZXUSslDf+EfwO8Bdwcp+Ub7awJDZBaUJfxebdKimEQAnQ9J4EaIwa+mCzIkYCfMVWUpsA==
-  dependencies:
-    "@event-calendar/time-grid" "~0.17.0"
-    svelte "^3.55.1"
-
-"@event-calendar/time-grid@^0.17.0", "@event-calendar/time-grid@~0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@event-calendar/time-grid/-/time-grid-0.17.0.tgz#fbfb1745829a14075b2842ba1741f5df52d22fc2"
-  integrity sha512-+k8SXXohLUUo/eo2M7TnpfRF/lghuJL8cMbiW6PEIAaNFDZebviZ492r2RGWY166Bba9sBe2p2wT4aO4YQ//Mw==
-  dependencies:
-    "@event-calendar/common" "~0.17.0"
-    svelte "^3.55.1"
-
-"@fullcalendar/bootstrap5@^6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/bootstrap5/-/bootstrap5-6.1.4.tgz#b1c129ef1e6db3ccd2f58b8639a2b6d5a5caa8a1"
-  integrity sha512-EVfoK5wxKX31j4AvoMC9+znN9hJPOcwxbL7zhf8wKs+5xc0/q+5ybrv0U8lCvQKD9f7bl5drU6jPG5hW2eAEVg==
+"@fullcalendar/bootstrap5@^6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/bootstrap5/-/bootstrap5-6.1.8.tgz#46b4c7a6bb6e966564b455a5a112847bc56badbc"
+  integrity sha512-/u8VlfZ8gXld29OrKtwbz8DrpzidGdHmXVlO8ZxlsHFC/PNGOnYd2YQZ6QtTuQFAI2bJUOw+9OVcydSoJixsGA==
 
 "@fullcalendar/common@~5.11.4":
   version "5.11.4"
@@ -163,17 +116,17 @@
   dependencies:
     tslib "^2.1.0"
 
-"@fullcalendar/core@^6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.4.tgz#bfc67bf4ad0c8d99a7e1258b24b5b241c6f48ed1"
-  integrity sha512-ZDD0Owv0LezAk14nsRNaOc9nbowItGmT0mnjOhEw+L6B8P5eads8yYaNA9itn70MWoOjiAG8xqD7Yk1iJGxqgQ==
+"@fullcalendar/core@^6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.8.tgz#62008f7b2785dc01f0bf8c2f0c853925eab1c03a"
+  integrity sha512-i8JBIvZCWGO9dsMEDcx9bnsQZ9PtGSJdOXGgWbhLaGq2iq41OBdp9g9gM4b/Otv2oK8bL5Gl6CsMmb/HkDtA6Q==
   dependencies:
-    preact "^10.0.5"
+    preact "~10.12.1"
 
-"@fullcalendar/daygrid@^6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.4.tgz#fe1335eaa7a4e60ee4b0e6b3896b32398fac6c2c"
-  integrity sha512-X0QWEiA/hT8GYiQzmXt9DlZTWaQbNtBHBXGtaMNcVXbGHDCzLoWTHrde/jABGfr/i2+d9sLUO4oTtwz2HVpNtQ==
+"@fullcalendar/daygrid@^6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.8.tgz#2ca4a10892f5e2abeac0f8a8ecc8f07c002a4bf4"
+  integrity sha512-kCZxQFKb9Vqa3CZRX0v7rMSJ2mlTt4gDpyLfiNJKxUAq7W51uKurPaFZWicaXy1ESHVBxKNlbx5uNjBpyu50JQ==
 
 "@fullcalendar/interaction@^5.0.0":
   version "5.11.4"
@@ -183,10 +136,10 @@
     "@fullcalendar/common" "~5.11.4"
     tslib "^2.1.0"
 
-"@fullcalendar/list@^6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-6.1.4.tgz#3d63fd6b0542d6dbf8426294cabe643f0a944d4f"
-  integrity sha512-RY2fE9J7ckzhKtvHOWhlI2FnVEBC4Z9ZlgRBE2nQekX2+THt+3KnZtOQxuYGnGi30NBKx794YsXeIc6/Lnl0Ww==
+"@fullcalendar/list@^6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-6.1.8.tgz#69e5efba0cb8416955a3ad1cd7d550345ffaa16d"
+  integrity sha512-10N0T/vCtId1cE3JGLpnbAivWVnaWCCkVO7wmbsyr5Y+I939kr/zq4BUNwBoP/xSFVVxx59FETh3iyA+MkV8Fw==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -645,16 +598,6 @@ boolbase@^1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-bootstrap-icons@^1.10.3:
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.10.3.tgz#c587b078ca6743bef4653fe90434b4aebfba53b2"
-  integrity sha512-7Qvj0j0idEm/DdX9Q0CpxAnJYqBCFCiUI6qzSPYfERMcokVuV9Mdm/AJiVZI8+Gawe4h/l6zFcOzvV7oXCZArw==
-
-bootstrap@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.3.tgz#54739f4414de121b9785c5da3c87b37ff008322b"
-  integrity sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1043,7 +986,7 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-dayjs@^1.10.6, dayjs@^1.11.7:
+dayjs@^1.10.6:
   version "1.11.7"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
   integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
@@ -3257,10 +3200,10 @@ pouchdb@7.3.0:
     uuid "8.3.2"
     vuvuzela "1.0.3"
 
-preact@^10.0.5:
-  version "10.13.1"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.13.1.tgz#d220bd8771b8fa197680d4917f3cefc5eed88720"
-  integrity sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ==
+preact@~10.12.1:
+  version "10.12.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.12.1.tgz#8f9cb5442f560e532729b7d23d42fd1161354a21"
+  integrity sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -3922,7 +3865,7 @@ svelte-fullcalendar@^2.0.0-beta.0:
   optionalDependencies:
     "@fullcalendar/interaction" "^5.0.0"
 
-svelte@^3.49.0, svelte@^3.55.1:
+svelte@^3.49.0:
   version "3.57.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.57.0.tgz#a3969cfe51f25f2a55e75f7b98dbd02c3af0980b"
   integrity sha512-WMXEvF+RtAaclw0t3bPDTUe19pplMlfyKDsixbHQYgCWi9+O9VN0kXU1OppzrB9gPAvz4NALuoca2LfW2bOjTQ==

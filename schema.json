@@ -8,95 +8,332 @@
     "icon": "Calendar",
     "settings": [
       {
-        "type": "dataProvider",
-        "label": "DataProvider (Event Group 1)",
-        "key": "dataProvider",
-        "required": true
-      },
-      {
-        "type": "text",
-        "key": "mappingTitle",
-        "label": "Title Mapping (Event Group 1)"
-      },
-      {
-        "type": "text",
-        "key": "mappingDate",
-        "label": "Date Mapping (Event Group 1)"
-      },
-      {
-        "type": "text",
-        "key": "mappingId",
-        "label": "Id Mapping (Event Group 1)"
-      },
-      {
-        "type": "boolean",
-        "key": "allday",
-        "label": "AllDay Mapping (Event Group 1)"
-      },
-      {
-        "type": "color",
-        "label": "Color Mapping",
-        "key": "mappingColor",
-        "defaultValue": "#272727"
-      },
-      {
-        "type": "dataProvider",
-        "label": "DataProvider (Event Group 2)",
-        "key": "dataProvider2",
-        "required": false
-      },
-      {
-        "type": "text",
-        "key": "mappingTitle2",
-        "label": "Title Mapping (Event Group 2)"
-      },
-      {
-        "type": "text",
-        "key": "mappingDate2",
-        "label": "Date Mapping (Event Group 2)"
-      },
-      {
-        "type": "text",
-        "key": "mappingId2",
-        "label": "Id Mapping (Event Group 2)"
-      },
-      {
-        "type": "color",
-        "label": "Color Mapping",
-        "key": "mappingColor2",
-        "defaultValue": "#000"
-      },
-      {
-        "type": "boolean",
-        "key": "allday2",
-        "label": "AllDay Mapping (Event Group 2)"
-      },
-      {
-        "type": "select",
-        "key": "language",
-        "options": ["pt", "en", "fr", "es", "ru"] ,
-        "label": "language",
-        "defaultValue": "en"
-      },
-      {
-        "type": "select",
-        "key": "initialView",
-        "options": ["dayGridMonth", "dayGridWeek", "listWeek"] ,
-        "label": "Initial view",
-        "defaultValue": "dayGridMonth"
-      },
-      {
-        "type": "event",
-        "label": "On Click",
-        "key": "calendarEvent",
-        "context": [
+        "section": true,
+        "name": "Global options",
+        "icon": "Calendar",
+        "settings": [
           {
-            "label": "Clicked Event",
-            "key": "value"
+            "type": "select",
+            "key": "language",
+            "options": [
+              "pt",
+              "en",
+              "fr",
+              "es",
+              "ru"
+            ],
+            "label": "language",
+            "defaultValue": "en"
+          },
+          {
+            "type": "select",
+            "key": "initialView",
+            "options": [
+              "dayGridMonth",
+              "dayGridWeek",
+              "listWeek"
+            ],
+            "label": "Initial view",
+            "defaultValue": "dayGridMonth"
+          },
+          {
+            "type": "event",
+            "label": "On Click",
+            "key": "calendarEvent",
+            "context": [
+              {
+                "label": "Clicked Event",
+                "key": "value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Header options",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Left Options",
+            "key": "headerOptionsLeft",
+            "defaultValue": "prev,next today"
+          },
+          {
+            "type": "text",
+            "label": "Center Options",
+            "key": "headerOptionsCenter",
+            "defaultValue": "title"
+          },
+          {
+            "type": "text",
+            "label": "Right Options",
+            "key": "headerOptionsRight",
+            "defaultValue": "dayGridMonth,dayGridWeek,dayGridDay"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Event group 1",
+        "settings": [
+          {
+            "type": "boolean",
+            "key": "eventGroup1",
+            "label": "Activate Event Group 1",
+            "defaultValue": true
+          },
+          {
+            "type": "dataProvider",
+            "label": "DataProvider",
+            "key": "dataProvider1",
+            "required": true,
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingTitle1",
+            "label": "Title Mapping",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingDate1",
+            "label": "Date Mapping",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingId1",
+            "label": "Id Mapping",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "boolean",
+            "key": "allDay1",
+            "label": "Is all day?",
+            "defaultValue": false,
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingStart1",
+            "label": "Start Mapping",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingEnd1",
+            "label": "End Mapping",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          },
+          {
+            "type": "color",
+            "label": "Color Mapping",
+            "key": "mappingColor1",
+            "defaultValue": "#272727",
+            "dependsOn": {
+              "setting": "eventGroup1",
+              "value": true
+            }
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Event group 2",
+        "settings": [
+          {
+            "type": "boolean",
+            "key": "eventGroup2",
+            "label": "Activate Event Group 2",
+            "defaultValue": false
+          },
+          {
+            "type": "dataProvider",
+            "label": "DataProvider",
+            "key": "dataProvider2",
+            "required": true,
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingTitle2",
+            "label": "Title Mapping",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingDate2",
+            "label": "Date Mapping",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingId2",
+            "label": "Id Mapping",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "boolean",
+            "key": "allDay2",
+            "label": "Is all day?",
+            "defaultValue": false,
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingStart2",
+            "label": "Start Mapping",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingEnd2",
+            "label": "End Mapping",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          },
+          {
+            "type": "color",
+            "label": "Color Mapping",
+            "key": "mappingColor2",
+            "defaultValue": "#272727",
+            "dependsOn": {
+              "setting": "eventGroup2",
+              "value": true
+            }
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Event group 3",
+        "settings": [
+          {
+            "type": "boolean",
+            "key": "eventGroup3",
+            "label": "Activate Event Group 3",
+            "defaultValue": false
+          },
+          {
+            "type": "dataProvider",
+            "label": "DataProvider",
+            "key": "dataProvider3",
+            "required": true,
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingTitle3",
+            "label": "Title Mapping",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingDate3",
+            "label": "Date Mapping",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingId3",
+            "label": "Id Mapping",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "boolean",
+            "key": "allDay3",
+            "label": "Is all day?",
+            "defaultValue": false,
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingStart3",
+            "label": "Start Mapping",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "text",
+            "key": "mappingEnd3",
+            "label": "End Mapping",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
+          },
+          {
+            "type": "color",
+            "label": "Color Mapping",
+            "key": "mappingColor3",
+            "defaultValue": "#272727",
+            "dependsOn": {
+              "setting": "eventGroup3",
+              "value": true
+            }
           }
         ]
       }
     ]
-    
   }
 }

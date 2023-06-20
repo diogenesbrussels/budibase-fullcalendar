@@ -4,69 +4,100 @@
   import FullCalendar from "svelte-fullcalendar";
   import daygridPlugin from "@fullcalendar/daygrid";
   import listPlugin from "@fullcalendar/list";
-  import { onMount } from "svelte";
   import { langs, codeLang } from "./lang";
 
   export let language;
   export let initialView;
   export let calendarEvent;
 
-  export let mappingTitle;
-  export let mappingDate;
-  export let mappingId;
+  export let headerOptionsLeft, headerOptionsCenter, headerOptionsRight;
 
-  export let mappingTitle2;
-  export let mappingDate2;
-  export let mappingId2;
+  export let eventGroup1, eventGroup2, eventGroup3;
 
-  export let dataProvider;
+  export let dataProvider1;
+  export let mappingTitle1,
+    mappingDate1,
+    mappingId1,
+    allDay1,
+    mappingStart1,
+    mappingEnd1,
+    mappingColor1;
+
   export let dataProvider2;
+  export let mappingTitle2,
+    mappingDate2,
+    mappingId2,
+    allDay2,
+    mappingStart2,
+    mappingEnd2,
+    mappingColor2;
 
-  export let mappingColor;
-  export let mappingColor2;
-
-  export let allday;
-  export let allday2;
+  export let dataProvider3;
+  export let mappingTitle3,
+    mappingDate3,
+    mappingId3,
+    allDay3,
+    mappingStart3,
+    mappingEnd3,
+    mappingColor3;
 
   let eventsList = [];
-  onMount(() => {
-    if (eventsList.length > 0) {
-      eventsList = [];
-    }
-    if (dataProvider.rows) {
-      dataProvider.rows.forEach((event) => {
-        let eventColor = mappingColor ?? "#313131";
-        eventsList.push({
-          title: event[mappingTitle],
-          date: event[mappingDate],
-          id: event[mappingId],
-          color: eventColor,
-          event: event,
-          allDay: allday,
-        });
+
+  if (eventsList.length > 0) {
+    eventsList = [];
+  }
+  if (eventGroup1 && dataProvider1 && dataProvider1.rows) {
+    dataProvider1.rows.forEach((event) => {
+      let eventColor = mappingColor1 ?? "#313131";
+      eventsList.push({
+        title: event[mappingTitle1],
+        date: event[mappingDate1],
+        id: event[mappingId1],
+        color: eventColor,
+        event: event,
+        allDay: allDay1,
+        start: event[mappingStart1],
+        end: event[mappingEnd1],
       });
-    }
-    if (dataProvider2.rows) {
-      dataProvider2.rows.forEach((event) => {
-        let eventColor2 = mappingColor2 ?? "#eb4034";
-        eventsList.push({
-          title: event[mappingTitle2],
-          date: event[mappingDate2],
-          id: event[mappingId2],
-          color: eventColor2,
-          event: event,
-          allDay: allday2,
-        });
+    });
+  }
+  if (eventGroup2 && dataProvider2 && dataProvider2.rows) {
+    dataProvider2.rows.forEach((event) => {
+      let eventColor = mappingColor2 ?? "#313131";
+      eventsList.push({
+        title: event[mappingTitle2],
+        date: event[mappingDate2],
+        id: event[mappingId2],
+        color: eventColor,
+        event: event,
+        allDay: allDay2,
+        start: event[mappingStart2],
+        end: event[mappingEnd2],
       });
-    }
-    eventsList = eventsList;
-  });
+    });
+  }
+  if (eventGroup3 && dataProvider3 && dataProvider3.rows) {
+    dataProvider3.rows.forEach((event) => {
+      let eventColor = mappingColor3 ?? "#313131";
+      eventsList.push({
+        title: event[mappingTitle3],
+        date: event[mappingDate3],
+        id: event[mappingId3],
+        color: eventColor,
+        event: event,
+        allDay: allDay3,
+        start: event[mappingStart3],
+        end: event[mappingEnd3],
+      });
+    });
+  }
+  //eventsList = eventsList;
 
   let options = {
     headerToolbar: {
-      left: "prev,next today",
-      center: "title",
-      right: "dayGridMonth,dayGridWeek,dayGridDay",
+      left: headerOptionsLeft,
+      center: headerOptionsCenter,
+      right: headerOptionsRight,
     },
     plugins: [daygridPlugin, listPlugin],
     initialView: initialView,
@@ -80,8 +111,7 @@
     },
     events: eventsList,
     eventColor: "#378006",
-    theme: true,
-    ...langs[codeLang(language)],
+    ...langs[codeLang(language)]
   };
   const { styleable } = getContext("sdk");
   const component = getContext("component");
