@@ -31,7 +31,8 @@
             "options": [
               "dayGridMonth",
               "dayGridWeek",
-              "listWeek"
+              "listWeek",
+              "multiMonthYear"
             ],
             "label": "Initial view",
             "defaultValue": "dayGridMonth"
@@ -80,7 +81,7 @@
             "type": "text",
             "label": "Right Options",
             "key": "headerOptionsRight",
-            "defaultValue": "dayGridMonth,dayGridWeek,dayGridDay"
+            "defaultValue": "multiMonthYear,dayGridMonth,dayGridWeek,dayGridDay"
           }
         ]
       },

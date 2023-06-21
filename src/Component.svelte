@@ -5,6 +5,7 @@
   import interactionPlugin from "@fullcalendar/interaction";
   import daygridPlugin from "@fullcalendar/daygrid";
   import listPlugin from "@fullcalendar/list";
+  import multiMonthPlugin from '@fullcalendar/multimonth'
   import { langs, codeLang } from "./lang";
 
   export let language;
@@ -100,7 +101,7 @@
       center: headerOptionsCenter,
       right: headerOptionsRight,
     },
-    plugins: [daygridPlugin, listPlugin, interactionPlugin],
+    plugins: [daygridPlugin, listPlugin, multiMonthPlugin, interactionPlugin],
     initialView: initialView,
     initialDate: Date.now(),
     locale: language,
