@@ -2,13 +2,14 @@
   import { getContext } from "svelte";
   import "@fullcalendar/core/locales-all";
   import FullCalendar from "svelte-fullcalendar";
+  import interactionPlugin from "@fullcalendar/interaction";
   import daygridPlugin from "@fullcalendar/daygrid";
   import listPlugin from "@fullcalendar/list";
   import { langs, codeLang } from "./lang";
 
   export let language;
   export let initialView;
-  export let calendarEvent;
+  export let calendarEvent, calendarDate;
 
   export let headerOptionsLeft, headerOptionsCenter, headerOptionsRight;
 
@@ -99,19 +100,28 @@
       center: headerOptionsCenter,
       right: headerOptionsRight,
     },
-    plugins: [daygridPlugin, listPlugin],
+    plugins: [daygridPlugin, listPlugin, interactionPlugin],
     initialView: initialView,
     initialDate: Date.now(),
     locale: language,
     dayMaxEvents: true,
     eventClick: (event) => {
-      calendarEvent({
-        value: event.event.id,
-      });
+      if (typeof calendarEvent === "function") {
+        calendarEvent({
+          value: event.event.id,
+        });
+      }
+    },
+    dateClick: (event) => {
+      if (typeof calendarDate === "function") {
+        calendarDate({
+          value: event.date,
+        });
+      }
     },
     events: eventsList,
     eventColor: "#378006",
-    ...langs[codeLang(language)]
+    ...langs[codeLang(language)],
   };
   const { styleable } = getContext("sdk");
   const component = getContext("component");

@@ -38,11 +38,22 @@
           },
           {
             "type": "event",
-            "label": "On Click",
+            "label": "On Click Event",
             "key": "calendarEvent",
             "context": [
               {
                 "label": "Clicked Event",
+                "key": "value"
+              }
+            ]
+          },
+          {
+            "type": "event",
+            "label": "On Click Date",
+            "key": "calendarDate",
+            "context": [
+              {
+                "label": "Clicked Date",
                 "key": "value"
               }
             ]
