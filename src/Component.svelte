@@ -10,6 +10,7 @@
 
   export let language;
   export let initialView;
+  export let navLinks;
   export let calendarEvent, calendarDate;
 
   export let headerOptionsLeft, headerOptionsCenter, headerOptionsRight;
@@ -106,6 +107,7 @@
     initialDate: Date.now(),
     locale: language,
     dayMaxEvents: true,
+    navLinks: navLinks,
     eventClick: (event) => {
       if (typeof calendarEvent === "function") {
         calendarEvent({

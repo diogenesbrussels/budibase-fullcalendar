@@ -38,6 +38,12 @@
             "defaultValue": "dayGridMonth"
           },
           {
+            "type": "boolean",
+            "key": "navLinks",
+            "label": "Activate date navigations links",
+            "defaultValue": false
+          },
+          {
             "type": "event",
             "label": "On Click Event",
             "key": "calendarEvent",
