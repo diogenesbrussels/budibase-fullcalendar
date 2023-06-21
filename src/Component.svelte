@@ -111,7 +111,7 @@
     eventClick: (event) => {
       if (typeof calendarEvent === "function") {
         calendarEvent({
-          value: event.event.id,
+          value: event.event,
         });
       }
     },
